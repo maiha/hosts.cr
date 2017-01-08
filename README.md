@@ -1,4 +1,4 @@
-# hosts.cr
+# hosts.cr [![Build Status](https://travis-ci.org/maiha/hosts.cr.svg?branch=master)](https://travis-ci.org/maiha/hosts.cr)
 
 hosts for [Crystal](http://crystal-lang.org/).
 
