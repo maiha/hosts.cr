@@ -19,8 +19,9 @@ dependencies:
 
 ```
 Hosts.new
-Hosts#[](key)  : Hosts::Host
-Hosts#[]?(key) : Hosts::Host?
+Hosts#[](key)    : Hosts::Host
+Hosts#[]?(key)   : Hosts::Host?
+Hosts#name?(key) : String?
 ```
 
 ## Usage
@@ -36,6 +37,9 @@ hosts["192.168.1.1"]?      # => nil
 hosts["host1"]             # => Hosts::Host
 hosts["host1"].addr        # => "192.168.0.1"
 hosts["host_xxx"]?         # => nil
+
+hosts.name?("192.168.0.1") # => "host1"
+hosts.name?("192.168.1.1") # => nil
 ```
 
 ## Contributing

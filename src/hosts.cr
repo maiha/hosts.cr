@@ -33,6 +33,10 @@ class Hosts
     table(key)[key]?
   end
 
+  def name?(key : String)
+    self[key]?.try(&.names.first)
+  end
+
   private def table(key : String)
     case key
     when /^\d{1,3}(\.\d{1,3}){3}$/

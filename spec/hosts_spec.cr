@@ -35,4 +35,11 @@ describe Hosts do
     hosts["host1"]?.try(&.addr).should eq("192.168.0.1")
     hosts["xxx"]?.should eq(nil)
   end
+
+  it "#name?" do
+    hosts.name?("host1").should eq("host1")
+    hosts.name?("xxxxx").should eq(nil)
+    hosts.name?("192.168.0.1").should eq("host1")
+    hosts.name?("192.168.1.1").should eq(nil)
+  end
 end
