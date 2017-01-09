@@ -14,6 +14,7 @@ describe Hosts do
       EOF
   }
   hosts = Hosts.new(hosts_file.path)
+  hosts_file.unlink
 
   it "#[addr]" do
     hosts["192.168.0.1"].addr.should eq("192.168.0.1")
