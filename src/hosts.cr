@@ -37,6 +37,10 @@ class Hosts
     self[key]?.try(&.names.first)
   end
 
+  def addr?(key : String)
+    self[key]?.try(&.addr)
+  end
+
   private def table(key : String)
     case key
     when /^\d{1,3}(\.\d{1,3}){3}$/
