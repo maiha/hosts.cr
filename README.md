@@ -12,7 +12,7 @@ Add this to your application's `shard.yml`:
 dependencies:
   hosts:
     github: maiha/hosts.cr
-    version: 0.1.0
+    version: 0.2.0
 ```
 
 ## API
